@@ -13,10 +13,10 @@ const main = async () => {
 
     console.log(`Starting with ${ waveCount } waves recorded...`);
 
-    let waveTxn = await waveContract.wave( "Test Message" );
+    let waveTxn = await waveContract.wave( "TestName" );
     await waveTxn.wait();
 
-    waveTxn = await waveContract.connect(randomPerson).wave( "Text Message from Random User" );
+    waveTxn = await waveContract.connect(randomPerson).wave( "RandomUser" );
   
     waveCount = await waveContract.getTotalWaves();
 

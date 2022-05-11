@@ -7,11 +7,11 @@ import "hardhat/console.sol";
 contract WavePortal {
     uint256 totalWaves;
 
-    event NewWave( address indexed _from, uint256 timestamp, string message );
+    event NewWave( address indexed _from, string name, uint256 timestamp );
 
     struct Wave {
         address waver;
-        string message;
+        string name;
         uint256 timestamps;
     }
 
@@ -21,12 +21,12 @@ contract WavePortal {
         console.log("[samsep1ol]: Contract constructor ran");
     }
 
-    function wave( string memory _message ) public {
+    function wave( string memory _name ) public {
         totalWaves += 1;
         
-        emit NewWave(msg.sender, block.timestamp, _message);
+        emit NewWave(msg.sender, _name, block.timestamp);
         
-        waves.push( Wave(msg.sender, _message, block.timestamp) );
+        waves.push( Wave(msg.sender, _name, block.timestamp) );
 
         console.log("%s has waved!", msg.sender);
     }
