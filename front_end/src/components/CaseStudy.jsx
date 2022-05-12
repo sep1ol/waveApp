@@ -56,6 +56,10 @@ const CaseStudy = () => {
         <li>
             NewWave (event) => event that stores an indexed user address (so we can find the data afterwards), name and timestamp.
         </li>
+
+        <li>
+            Wave (struct) => similar to a JS object, the wave struct creates like a
+        </li>
     </ul>
     </Content>
     </Container>

@@ -22,7 +22,7 @@ const Header = () => {
             
             <Item 
                 onClick={() => setCaseStudy(prev => !prev)}
-            > WaveApp: GitHub Repo </Item>
+            > GitHub Repo </Item>
         </Menu>
     </Container>
   )
