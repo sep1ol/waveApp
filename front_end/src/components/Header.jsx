@@ -17,7 +17,6 @@ const Header = () => {
             <Item
                 onClick={() => {
                     window.open("https://rinkebyfaucet.com/", "_blank")
-                    setDisplayOptions(prev => !prev);
                 }}> Get Free ETH for Rinkeby's Testnet </Item>
             
             <Item 

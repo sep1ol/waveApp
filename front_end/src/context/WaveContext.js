@@ -118,11 +118,13 @@ export const WaveProvider = ({children}) => {
             const provider = new ethers.providers.Web3Provider(ethereum);
             const signer = provider.getSigner();
             const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
-            
+            console.log(wavePortalContract)
             var listOfWaves = await wavePortalContract.getAllWaves();
+            console.log(listOfWaves)
             
             var registeredWaves = [];
             listOfWaves.map(wave => {
+                console.log(wave)
                 registeredWaves.push({
                     address: wave[0],
                     name: wave[1],

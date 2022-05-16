@@ -5,7 +5,6 @@ import WaveContext from '../context/WaveContext'
 
 const WaveLogs = () => {
     const {
-        setDisplayOptions,
         setWaveLogs,
         getWaves,
         waves,
@@ -20,7 +19,6 @@ const WaveLogs = () => {
         <BackBtn
             onClick={() => {
             setWaveLogs(prev => !prev);
-            setDisplayOptions(prev => !prev);
         }}>&lt;&lt; BACK</BackBtn>
 
         <h3>Click an item to see the transaction on chain</h3>
